@@ -30,6 +30,7 @@ All function definitions do NOT need type annotations, example:
 def merge_segments(
     segments,
     train_action_chunk,
+    ...
 ):
 ```
 
