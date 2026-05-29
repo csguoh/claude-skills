@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+          "name": "dist_debug",
+          "type": "python",
+          "request": "launch",
+          "program": "${file}",                     
+          "args": [
+          ],
+          "env": {
+            "TOKENIZERS_PARALLELISM": "false",
+            "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+            "TORCHFT_LIGHTHOUSE": "http://localhost:29510",
+            "PYTHONPATH": "${workspaceFolder}",
+            "RANK": "0",
+            "LOCAL_RANK": "0",
+            "WORLD_SIZE": "1",
+            "MASTER_ADDR": "localhost",
+            "MASTER_PORT": "29501",
+            "CUDA_VISIBLE_DEVICES": "0",
+            "HDF5_USE_FILE_LOCKING": "FALSE"
+          },
+          "cwd": "${workspaceFolder}",              
+          "console": "integratedTerminal",         
+          "justMyCode": true,
+          "python": "${command:python.interpreterPath}"
+      }
+    ]
+  }
