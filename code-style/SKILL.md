@@ -10,7 +10,8 @@ description: Enforce Python code style conventions when writing, reviewing, or r
 - All code, comments, docstrings, and print/log messages MUST be in English.
 - Keep comments minimal. Do NOT add obvious or redundant comments.
 - Use `# ---- section title ----` to separate logic blocks in large files.
-
+- No blank line between a `# ---- ... ----` section comment and the function/class definition immediately below it.
+- Do NOT add a file-level docstring or comment describing what the file does at the top.
 
 ## Naming
 
@@ -18,9 +19,11 @@ description: Enforce Python code style conventions when writing, reviewing, or r
 |---------|-----------|---------|
 | Class | PascalCase | `VideoSegmenter` |
 | Function/Method | snake_case | `build_dataset` |
-| Private | `_` prefix | `_preprocess` |
+| Private | `__` prefix | `_preprocess` |
 | Constant | UPPER_CASE | `REQUIRED_KEYS` |
 | Variable | snake_case | `data_root` |
+
+> Function/method names must be descriptive (3–4 words), e.g. `_build_video_dataset`, `_parse_action_chunk`. Avoid vague single-word names like `_build` or `_parse` — they cause name collisions across classes and are unreadable without context.
 
 ## Type Hints
 
@@ -43,6 +46,7 @@ def merge_segments(
 - If a function/class signature or argument list fits cleanly on one line, prefer single-line over multi-line
 
 ## Error Handling
+
 - Do NOT use `try-except` unless absolutely necessary (e.g., parsing untrusted external input).
 - Do NOT add defensive checks for invalid inputs unless explicitly required. Let Python raise naturally — a loud error is preferable to silent edge-case handling.
 
