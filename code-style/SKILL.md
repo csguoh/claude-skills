@@ -9,8 +9,9 @@ description: Enforce Python code style conventions when writing, reviewing, or r
 
 - All code, comments, docstrings, and print/log messages MUST be in English.
 - Keep comments minimal. Do NOT add obvious or redundant comments.
-- Use `# ---- section title ----` to separate logic blocks in large files.
-- No blank line between a `# ---- ... ----` section comment and the function/class definition immediately below it.
+- When you believe a comment is necessary, use one of these two forms:
+  - **Logic block separators** (`""" ---- section title ---- """`): used to visually split large files into sections. Surround with blank lines above and below.
+  - **Function/line annotations** (`# xxx`): a short plain comment describing what the next function or line does. No blank line between this comment and the code immediately below it. Format is just `# xxx` (no dashes, no decoration).
 - Do NOT add a file-level docstring or comment describing what the file does at the top.
 
 ## Naming
@@ -23,7 +24,7 @@ description: Enforce Python code style conventions when writing, reviewing, or r
 | Constant | UPPER_CASE | `REQUIRED_KEYS` |
 | Variable | snake_case | `data_root` |
 
-> Function/method names must be descriptive (3–4 words), e.g. `_build_video_dataset`, `_parse_action_chunk`. Avoid vague single-word names like `_build` or `_parse` — they cause name collisions across classes and are unreadable without context.
+> Function/method names must be descriptive (2–4 words), e.g. `_build_video_dataset`, `_parse_action_chunk`. Avoid vague single-word names like `_build` or `_parse` — they cause name collisions across classes and are unreadable without context.
 
 ## Type Hints
 
