@@ -46,6 +46,12 @@ def merge_segments(
 - 1 blank line between methods inside a class
 - If a function/class signature or argument list fits cleanly on one line, prefer single-line over multi-line
 
+## Brevity Principle
+
+- Prefer concise code over defensive code. Make strong format assumptions on external data (e.g., assume inputs are always a list of dicts with specific keys) rather than adding layers of `if/else` or type-checking. Add a short comment stating the expected input format instead.
+- Never write branches that are unlikely to be reached in practice — a natural Python error is more informative than dead code.
+- When in doubt, let it crash. Short, readable code that fails loudly on bad input is better than bloated code that silently handles imaginary edge cases.
+
 ## Error Handling
 
 - Do NOT use `try-except` unless absolutely necessary (e.g., parsing untrusted external input).
