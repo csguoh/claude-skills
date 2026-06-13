@@ -48,9 +48,8 @@ def merge_segments(
 
 ## Brevity Principle
 
-- Prefer concise code over defensive code. Make strong format assumptions on external data (e.g., assume inputs are always a list of dicts with specific keys) rather than adding layers of `if/else` or type-checking. Add a short comment stating the expected input format instead.
-- Never write branches that are unlikely to be reached in practice — a natural Python error is more informative than dead code.
-- When in doubt, let it crash. Short, readable code that fails loudly on bad input is better than bloated code that silently handles imaginary edge cases.
+- Prefer concise code over defensive code. Make strong format assumptions on external variables rather than adding layers of `if/else` or type-checking. In this case, add a short comment stating the expected input format.
+- When in doubt, let it crash. Short, readable code that fails loudly is better than multiple if/else code where some branch will never be reached in practice.
 
 ## Error Handling
 
