@@ -54,7 +54,7 @@ def merge_segments(
 ## Error Handling
 
 - Do NOT use `try-except` unless absolutely necessary (e.g., parsing untrusted external input).
-- Do NOT add defensive checks for invalid inputs unless explicitly required. Let Python raise naturally — a loud error is preferable to silent edge-case handling.
+- Do NOT add defensive checks for invalid inputs unless explicitly required.
 
 ## argparse
 
