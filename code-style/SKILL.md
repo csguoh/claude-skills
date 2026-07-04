@@ -50,6 +50,8 @@ def merge_segments(
 
 - Prefer concise code over defensive code. Make strong format assumptions on external variables rather than adding layers of `if/else` or type-checking. In this case, add a short comment stating the expected input format.
 - When in doubt, let it crash. Short, readable code that fails loudly is better than multiple if/else code where some branch will never be reached in practice.
+- Whenever there is a major rewrite, there is no need to retain the previous code: it is better to keep the code clean rather than include redundant or outdated features.
+
 
 ## Error Handling
 
