@@ -52,6 +52,9 @@ def merge_segments(
 - When in doubt, let it crash. Short, readable code that fails loudly is better than multiple if/else code where some branch will never be reached in practice.
 - Whenever there is a major rewrite, there is no need to retain the previous code for compatibility: it is better to keep the code clean rather than include redundant or outdated features.
 - Don't write functions that are only a few lines long; in such cases, inline them directly to avoid nested functions.
+- Default values and candidate values for `argparse` should be specified directly in the parameter definitions, do not create file-level constants for them.
+
+
 
 
 
